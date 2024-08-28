@@ -1,0 +1,93 @@
+.navbar-container{
+    width: 100%;
+    background: #00d2d3;
+    height: 4rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 5rem;
+}
+
+.navbar-container img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.navbar-container ul{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.navbar-container ul li{
+    font-size: 18px;
+    font-weight: 500;
+
+}
+
+.toggle-menu{
+    display: none;
+}
+
+.active{
+    border-bottom: 2px solid rgb(3, 3, 172);
+
+}
+
+
+/*-----------------------------MEDIA FOR SMALL DEVICE-------------------------------*/
+
+@media screen and (max-width:600px) {
+    .navbar-container img{
+        display: none;
+    }
+    
+    .navbar-container ul{
+        gap: 4px;
+        display: none;
+        position: relative;
+        margin-top: -6px;
+    }
+    .toggle-menu{
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        
+    }
+    .toggle-menu button{
+        font-size: 23px;
+        border: none;
+        background: transparent;
+    }
+
+}
+
+@media screen and (max-width:1024px) {
+    .navbar-container ul{
+        display: none;
+    }
+    .toggle-menu button{
+        font-size: 23px;
+        border: none;
+        background: transparent;
+    }
+    .toggle-menu{
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        
+    }
+    .navbar-container{
+        padding: 1rem;
+    }
+    .navbar-container img{
+        width: 40px;
+        height: 40px;
+    }
+}
